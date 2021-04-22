@@ -3,27 +3,39 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Login from '../views/Login'
 import Register from '../views/Register'
-
-
+import Dashboard from '../views/Dashboard'
+import store from '../store/index'
 
 Vue.use(VueRouter)
-
 
 const routes = [
     {
         path: '/home',
-        name: 'Home',
+        name: 'home',
         component: Home
     },
     {
         path: '/login',
-        name: 'Login',
+        name: 'login',
         component: Login
     },
     {
         path: '/register',
-        name: 'Register',
+        name: 'register',
         component: Register
+    },
+    {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: Dashboard,
+        beforeEnter: (to, from, next) => {
+            if(!store.getters['auth/isAuthenticated']){
+                return next({
+                    name: 'login'
+                })
+            }
+            next()
+        }
     }
 ]
 

@@ -9,7 +9,7 @@
     </div>
 </template>
 <script>
-import Navbar from "./components/Navbar";
+import Navbar from "./Navbar";
 import { mapGetters } from "vuex";
 
 export default {

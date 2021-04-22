@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="306f04ff-10a4-4c80-88e6-f049497ddb63" name="vuesf.controliza.com">
+        <fileTransfer rootFolder="/var/www/vuesf" accessType="SFTP" host="37.153.90.39" port="22" sshConfigId="3aea732c-d2ed-4a28-87e2-4be298371119" sshConfig="root@37.153.90.39:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
